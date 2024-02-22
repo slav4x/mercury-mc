@@ -1,1 +1,117 @@
-
+.header
+  &-top
+    height: 42px
+    .container
+      height: 100%
+      @include flexbox
+      align-items: center
+  &-city
+    &__active
+      line-height: 20px
+      color: var(--color-orange)
+      border-bottom: 1px dashed var(--color-orange)
+      position: relative
+      cursor: pointer
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: -20px
+        margin: auto 0
+        width: 11px
+        height: 6px
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_40_359)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.0517578 0.447863C0.0517578 0.82478 0.253655 0.915392 0.6477 1.31155C0.882281 1.54738 1.09418 1.76042 1.32878 1.99626C2.06308 2.7345 3.39139 4.0128 4.02126 4.70488L4.34718 5.0308C4.46821 5.15256 4.56665 5.25145 4.68772 5.37316C5.43413 6.12357 5.45195 6.26995 6.313 5.40429L10.353 1.34266C10.6855 1.00839 10.949 0.843533 10.949 0.447863C10.949 0.264815 10.566 -0.352949 9.95803 0.291968L9.42864 0.817945C9.32314 0.92778 9.24436 1.0256 9.13019 1.14036C8.8417 1.4303 5.63248 4.62217 5.53133 4.77404C5.37708 4.6702 1.72646 0.964392 1.29781 0.533451C0.983423 0.217368 0.85924 0.0121331 0.485169 0.0121331C0.29185 0.0121331 0.0517578 0.25351 0.0517578 0.447863V0.447863Z' fill='%23FF9501'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_40_359'%3E%3Crect width='11' height='6' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+  &-subnav
+    @include flexbox
+    align-items: center
+    margin-left: auto
+    gap: 20px
+    line-height: 18px
+    border-right: 1px solid var(--color-gray)
+    padding-right: 10px
+    li
+      a
+        span
+          @include flexbox
+          align-items: center
+          color: var(--color-orange)
+          padding: 6px 20px
+          border-left: 1px solid var(--color-gray)
+          border-right: 1px solid var(--color-gray)
+          gap: 8px
+          i
+            width: 22px
+            height: 14px
+            background-image: url("data:image/svg+xml,%3Csvg width='22' height='14' viewBox='0 0 22 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 7C21 7 18 13 11 13C4 13 1 7 1 7C1 7 4 1 11 1C18 1 21 7 21 7Z' stroke='%23FF9501' stroke-linecap='round'/%3E%3Ccircle cx='11' cy='7' r='3' stroke='%23FF9501' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+        i
+          display: block
+          &.login
+            width: 22px
+            height: 22px
+            background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 18.5C4.5 18.5 8 17 9 16C10 15 7 15 7 10C7 5 11 5 11 5C11 5 15 5 15 10C15 15 12 15 13 16C14 17 17.5 18.5 17.5 18.5' stroke='%23FF9501' stroke-linecap='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z' stroke='%23FF9501'/%3E%3C/svg%3E%0A")
+            margin-left: -10px
+  &-bottom
+    padding: 10px 0
+  &-nav
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    font-size: 16px
+    line-height: 20px
+  &-middle
+    height: 100px
+    color: #fff
+    background: var(--color-turquoise)
+    .container
+      height: 100%
+      @include flexbox
+      align-items: center
+  &-logo
+    display: block
+    img
+      height: 64px
+  &-phone
+    @include flexbox
+    align-items: center
+    gap: 10px
+    margin-left: auto
+    p
+      font-size: 16px
+      line-height: 20px
+    a
+      font-size: 20px
+      font-weight: 700
+      line-height: 20px
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    background: var(--color-orange)
+    text-align: center
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 16px
+    width: 210px
+    height: 42px
+    border-radius: 10px
+    margin-left: 30px
+  &-search
+    flex: 1
+    margin: 0 30px
+    position: relative
+    input
+      width: 100%
+      background: #fff
+      height: 42px
+      border-radius: 10px
+      padding-right: 42px
+      padding-left: 15px
+    button
+      width: 42px
+      height: 42px
+      position: absolute
+      top: 0
+      right: 0
+      cursor: pointer
+      background: transparent url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.728 17.2913L15.8332 13.3971C15.6574 13.2214 15.4191 13.1237 15.1691 13.1237H14.5323C15.6105 11.7449 16.2512 10.0107 16.2512 8.12421C16.2512 3.63636 12.6142 0 8.12559 0C3.63698 0 0 3.63636 0 8.12421C0 12.612 3.63698 16.2484 8.12559 16.2484C10.0125 16.2484 11.747 15.6079 13.126 14.5298V15.1665C13.126 15.4165 13.2236 15.6547 13.3994 15.8305L17.2942 19.7246C17.6614 20.0918 18.2552 20.0918 18.6185 19.7246L19.7241 18.6193C20.0913 18.2521 20.0913 17.6584 19.728 17.2913ZM8.12559 13.1237C5.36367 13.1237 3.12523 10.8896 3.12523 8.12421C3.12523 5.36276 5.35977 3.12469 8.12559 3.12469C10.8875 3.12469 13.126 5.35885 13.126 8.12421C13.126 10.8857 10.8914 13.1237 8.12559 13.1237Z' fill='%2332B6B8'/%3E%3C/svg%3E%0A") no-repeat center
