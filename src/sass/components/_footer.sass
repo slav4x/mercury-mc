@@ -1,1 +1,86 @@
-
+.footer
+  background: var(--color-turquoise)
+  padding: 40px 0
+  color: #fff
+  .container
+    @include flexbox
+  &-sidebar
+    max-width: 230px
+  &-logo
+    display: block
+    margin-bottom: 30px
+    img
+      height: 64px
+  &-phone
+    margin-bottom: 30px
+    p
+      font-size: 16px
+      line-height: 20px
+      margin-bottom: 10px
+    a
+      font-size: 20px
+      line-height: 20px
+      font-weight: 700
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    background: var(--color-orange)
+    text-align: center
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 16px
+    width: 210px
+    height: 42px
+    border-radius: 10px
+    margin-bottom: 40px
+  &-link
+    font-size: 16px
+    border-bottom: 1px solid #fff
+    padding-bottom: 2px
+  &-main
+    max-width: 560px
+    margin-left: auto
+    @include flexbox
+    align-items: flex-start
+  &-row
+    @include flexbox
+    justify-content: space-between
+    width: 100%
+    &.bottom
+      margin-top: auto
+  &-nav
+    font-size: 14px
+    line-height: 20px
+    @include flexbox
+    flex-direction: column
+    gap: 15px
+    li
+      a
+        border-bottom: 1px solid #fff
+        padding-bottom: 2px
+      &.bottom
+        margin-top: auto
+  &-bubble
+    span
+      display: block
+      background: #44c8ca
+      border-radius: 100%
+      position: absolute
+      z-index: -1
+      pointer-events: none
+      &:nth-child(1)
+        width: 27px
+        height: 27px
+        top: -80px
+        left: 280px
+      &:nth-child(2)
+        width: 54px
+        height: 54px
+        top: -57px
+        left: 330px
+      &:nth-child(3)
+        width: 27px
+        height: 27px
+        bottom: 36px
+        left: 280px
