@@ -1,0 +1,62 @@
+.news
+  padding-bottom: var(--gap)
+  &-grid
+    @include flexbox
+    align-items: flex-start
+    gap: 32px
+  &-col
+    width: calc(100% / 2 - 16px)
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    gap: 32px
+  &-item
+    @include flexbox
+    align-items: center
+    gap: 24px
+    width: 100%
+    &__poster
+      width: calc(100% - 240px - 24px)
+      height: 200px
+      border-radius: 10px
+      object-fit: cover
+      object-position: center
+    &__content
+      width: 240px
+      @include flexbox
+      flex-direction: column
+      align-items: flex-start
+      gap: 8px
+    &__date
+      font-size: 14px
+      font-weight: 700
+      color: var(--color-turquoise)
+    &__title
+      color: var(--color-orange)
+      font-size: 17px
+      font-weight: 700
+      -webkit-line-clamp: 3
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      overflow: hidden
+    &__summary
+      font-size: 14px
+      line-height: 24px
+      color: var(--color-dark-gray)
+      -webkit-line-clamp: 4
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      overflow: hidden
+    &__big
+      .news-item__poster
+        width: 100%
+        height: 250px
+      .news-item__content
+        width: 100%
+      .news-item__title
+        font-size: 24px
+  .btn-wrap
+    margin-top: 40px
+    justify-content: center
+  .btn
+    max-width: 360px
