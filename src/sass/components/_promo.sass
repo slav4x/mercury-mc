@@ -1,0 +1,52 @@
+.promo
+  padding-bottom: var(--gap)
+  &-grid
+    @include flexbox
+    align-items: flex-start
+    gap: 16px
+  &-item
+    width: calc(100% / 2 - 8px)
+    padding-bottom: 100px
+    &__content
+      position: relative
+      padding: 24px
+      color: #fff
+      height: 270px
+      border-radius: 20px
+      background: var(--color-turquoise)
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 175px
+        width: 93px
+        height: 93px
+        border-radius: 100%
+        background: #44c8ca
+    &__title
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 30px
+    &__desc
+      font-size: 16px
+      margin-top: 12px
+      line-height: 25px
+    .btn-wrap
+      position: absolute
+      bottom: -21px
+      left: 24px
+      right: 24px
+    .btn
+      max-width: 200px
+    &__poster
+      position: absolute
+      top: 130px
+      right: 0
+      width: calc(100% - 200px - 24px - 24px)
+      height: 240px
+      object-fit: cover
+      object-position: center
+      border-radius: 500px 0px 20px 500px
+    &:nth-child(2n) .promo-item__content::before
+      left: 34px
+      bottom: -21px
