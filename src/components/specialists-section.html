@@ -1,0 +1,37 @@
+<section class="specialists">
+  <div class="container">
+    <div class="specialists-top">
+      <h2 class="title"><span>СПЕЦИАЛИСТЫ</span></h2>
+      <div class="specialists-top__filter">
+        <div class="specialists-top__search">
+          <input type="text" placeholder="Поиск...">
+          <button></button>
+        </div>
+        <label class="specialists-top__select">
+          <select>
+            <option selected disabled>Все клиники</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+          </select>
+        </label>
+        <label class="specialists-top__select">
+          <select>
+            <option selected disabled>Специальность</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+            <option>Вариант</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="specialists-grid">
+      {% include 'components/specialists-item.html' %}
+      {% include 'components/specialists-item.html' %}
+      {% include 'components/specialists-item.html' %}
+      {% include 'components/specialists-item.html' %}
+    </div>
+  </div>
+</section>

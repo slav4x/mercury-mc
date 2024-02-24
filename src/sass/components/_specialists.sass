@@ -1,0 +1,79 @@
+.specialists
+  padding-bottom: var(--gap)
+  &-top
+    @include flexbox
+    align-items: flex-start
+    padding-top: 7px
+    margin-bottom: 40px
+    .title
+      margin-bottom: 0
+    &__filter
+      @include flexbox
+      align-items: center
+      gap: 24px
+      flex: 1
+      justify-content: flex-end
+    &__search
+      position: relative
+      max-width: 260px
+      width: 100%
+      input
+        width: 100%
+        background: #fff
+        height: 42px
+        border-radius: 10px
+        padding-right: 42px
+        padding-left: 15px
+        border: 1px solid var(--color-turquoise)
+      button
+        width: 42px
+        height: 42px
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+        background: transparent url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.728 17.2913L15.8332 13.3971C15.6574 13.2214 15.4191 13.1237 15.1691 13.1237H14.5323C15.6105 11.7449 16.2512 10.0107 16.2512 8.12421C16.2512 3.63636 12.6142 0 8.12559 0C3.63698 0 0 3.63636 0 8.12421C0 12.612 3.63698 16.2484 8.12559 16.2484C10.0125 16.2484 11.747 15.6079 13.126 14.5298V15.1665C13.126 15.4165 13.2236 15.6547 13.3994 15.8305L17.2942 19.7246C17.6614 20.0918 18.2552 20.0918 18.6185 19.7246L19.7241 18.6193C20.0913 18.2521 20.0913 17.6584 19.728 17.2913ZM8.12559 13.1237C5.36367 13.1237 3.12523 10.8896 3.12523 8.12421C3.12523 5.36276 5.35977 3.12469 8.12559 3.12469C10.8875 3.12469 13.126 5.35885 13.126 8.12421C13.126 10.8857 10.8914 13.1237 8.12559 13.1237Z' fill='%2332B6B8'/%3E%3C/svg%3E%0A") no-repeat center
+    &__select
+      height: 42px
+      border: 1px solid #DDE2E4
+      border-radius: 10px
+      padding: 9px 4px 9px 12px
+      @include flexbox
+      align-items: center
+      gap: 4px
+      cursor: pointer
+      select
+        height: 100%
+        padding: 0
+        appearance: none
+        cursor: pointer
+      &::after
+        content: ''
+        display: block
+        width: 22px
+        height: 22px
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10.5L12 14.5L16 10.5' stroke='%23828282'/%3E%3C/svg%3E%0A") no-repeat center
+  &-grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 40px 16px
+  &-item
+    font-size: 16px
+    line-height: 25px
+    &__photo
+      object-fit: cover
+      object-position: center
+      border-radius: 20px
+      width: 100%
+      height: 315px
+    &__name
+      font-weight: 700
+      color: var(--color-dark-turquoise)
+      display: block
+      min-height: 50px
+      margin-top: 20px
+    &__info
+      color: var(--color-dark-gray)
+      margin-top: 16px
+    .btn
+      margin-top: 16px
