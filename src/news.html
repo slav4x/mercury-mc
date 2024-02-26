@@ -3,6 +3,31 @@
 
 {% block content %}
 
-
+<section class="news">
+  <div class="container">
+    <h2 class="title"><span>НОВОСТИ</span></h2>
+    <div class="news-page__grid">
+      {% include 'components/news-item.html' %}
+      {% include 'components/news-item.html' %}
+      {% include 'components/news-item.html' %}
+      {% include 'components/news-item.html' %}
+      {% include 'components/news-item.html' %}
+      {% include 'components/news-item.html' %}
+    </div>
+    <div class="news-pagination">
+      <a href="#" class="news-pagination__prev">Предыдущая</a>
+      <ul class="news-pagination__list">
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class="separator">...</li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">10</a></li>
+      </ul>
+      <a href="#" class="news-pagination__next">Следующая</a>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

@@ -60,3 +60,60 @@
     justify-content: center
   .btn
     max-width: 360px
+
+  &-page__grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 32px 16px
+  &-pagination
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    margin-top: 32px
+    padding-top: 32px
+    border-top: 1px solid #eee
+    &__list
+      @include flexbox
+      align-items: center
+      gap: 2px
+      li
+        a
+          @include flexbox
+          align-items: center
+          justify-content: center
+          width: 40px
+          height: 40px
+          border-radius: 8px
+          &:hover
+            color: var(--color-orange)
+        &.active a
+          background: #f1f1f1
+          color: var(--color-orange)
+        &.separator
+          width: 40px
+          height: 40px
+          @include flexbox
+          align-items: center
+          justify-content: center
+    &__prev, &__next
+      height: 40px
+      width: 150px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      border-radius: 8px
+      border: 1px solid #D0D5DD
+      gap: 8px
+    &__prev::before
+      content: ''
+      display: block
+      width: 20px
+      height: 20px
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8337 10H4.16699M4.16699 10L10.0003 15.8333M4.16699 10L10.0003 4.16667' stroke='%23FF9501' stroke-width='1.67' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / cover
+    &__next::after
+      content: ''
+      display: block
+      width: 20px
+      height: 20px
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8337 10H4.16699M4.16699 10L10.0003 15.8333M4.16699 10L10.0003 4.16667' stroke='%23FF9501' stroke-width='1.67' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / cover
+      transform: rotate(180deg)
