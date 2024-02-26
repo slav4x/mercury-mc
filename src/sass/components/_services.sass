@@ -4,3 +4,31 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 32px 16px
+  &-head
+    padding-top: 30px
+    padding-bottom: var(--gap)
+    .title
+      margin-bottom: 0
+    &__wrapper
+      padding: 20px 30px
+      width: calc(100% - 310px)
+      margin-left: -30px
+      margin-right: -30px
+      background: var(--color-light-turquoise)
+      border-radius: 20px
+    &__text
+      line-height: 25px
+      max-width: 680px
+      p
+        margin-top: 15px
+        &:first-child
+          margin-top: 0
+    &__image
+      position: absolute
+      top: 0
+      right: 15px
+      width: 370px
+      height: 230px
+      border-radius: 10px
+      object-fit: cover
+      object-position: center
