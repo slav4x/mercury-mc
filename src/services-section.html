@@ -1,0 +1,36 @@
+{% extends 'components/_layout.html' %}
+{% set site_title = 'Услуги и цены - раздел' %}
+
+{% block content %}
+
+<section class="services-head">
+  <div class="container">
+    <img src="img/services-head-2.jpg" alt="" class="services-head__image">
+    <h2 class="title"><span>Эндокринология</span></h2>
+    <div class="services-head__wrapper">
+      <div class="services-head__text">
+        <p>Часто происходит, что другой доктор направляет пациента к эндокринологу. Гинекологи, урологи, терапевты — эти специалисты тесно работают с эндокринологами. К врачу нужно сходить супругам, которые планируют зачатие ребенка, людям, у которых лишний вес, и тем, у кого его недобор. Обязательно сходите к эндокринологу, если вдруг возникли следующие проблемы:</p>
+        <ul>
+          <li>постоянная утомляемость,</li>
+          <li>сонливость,</li>
+          <li>потеря памяти,</li>
+          <li>постоянное онемение рук и ног и т.д.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    {% include 'components/services-grid.html' %}
+  </div>
+</section>
+
+{% include 'components/promo-section.html' %}
+
+{% include 'components/quiz-section.html' %}
+
+{% include 'components/specialists-section.html' %}
+
+{% endblock %}
