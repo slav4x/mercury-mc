@@ -1,0 +1,25 @@
+.faq
+  padding-bottom: var(--gap)
+  &-item
+    border-top: 1px solid #E5E9EB
+    margin-left: -15px
+    margin-right: -15px
+    line-height: 25px
+    &:last-child
+      border-bottom: 1px solid #E5E9EB
+    &:hover,
+    &.active
+      .faq-title
+        color: var(--color-orange)
+    &.active
+      .faq-text
+        display: block
+  &-title
+    cursor: pointer
+    color: var(--color-turquoise)
+    padding: 8px 15px
+    font-size: 16px
+    transition: .25s
+  &-text
+    padding: 0 15px 8px
+    display: none

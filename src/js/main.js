@@ -29,4 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
     autoFocus: false,
     placeFocusBack: false,
   });
+
+  const faq = document.querySelector('.faq');
+  if (faq) {
+    faq.addEventListener('click', (e) => {
+      if (e.target.classList.contains('faq-title')) {
+        const item = e.target.closest('.faq-item');
+        if (item) {
+          item.classList.toggle('active');
+          [...faq.querySelectorAll('.faq-item')].forEach((el) => {
+            if (el !== item) el.classList.remove('active');
+          });
+        }
+      }
+    });
+  }
 });
