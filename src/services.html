@@ -1,0 +1,18 @@
+{% extends 'components/_layout.html' %}
+{% set site_title = 'Услуги и цены' %}
+
+{% block content %}
+
+<section class="services">
+  <div class="container">
+    {% include 'components/services-grid.html' %}
+  </div>
+</section>
+
+{% include 'components/promo-section.html' %}
+
+{% include 'components/quiz-section.html' %}
+
+{% include 'components/specialists-section.html' %}
+
+{% endblock %}
