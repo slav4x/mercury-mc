@@ -1,0 +1,37 @@
+.price
+  margin-bottom: 30px
+  &:last-child
+    margin-bottom: 0
+  &-title
+    font-size: 32px
+    line-height: 55px
+    font-weight: 700
+    text-transform: uppercase
+    color: var(--color-turquoise)
+    margin-bottom: 10px
+  &-table
+    margin-left: -15px
+    margin-right: -15px
+  &-row
+    @include flexbox
+    align-items: flex-start
+    border-bottom: 1px solid #E5E9EB
+    line-height: 25px
+    &:first-child
+      border-top: 1px solid #E5E9EB
+      color: var(--color-turquoise)
+    &:hover
+      background: #f9f9f9
+  &-col
+    padding: 8px 15px
+    &:nth-child(1)
+      width: calc(100% - 140px)
+    &:nth-child(2)
+      width: 140px
+      text-align: right
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    .btn
+      max-width: 330px
