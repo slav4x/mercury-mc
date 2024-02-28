@@ -1,0 +1,43 @@
+.feedback
+  padding-top: 80px
+  padding-bottom: 40px
+  &-content
+    max-width: 560px
+    margin-left: auto
+    margin-right: 95px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: 30px
+      left: -540px
+      width: 276px
+      height: 276px
+      border-radius: 100%
+      background: var(--color-light-turquoise)
+      z-index: -5
+  .title
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: -20px
+      height: 3px
+      right: 0
+      left: -260px
+      background: var(--color-turquoise)
+      z-index: -5
+  &-form
+    @include flexbox
+    align-items: center
+    gap: 15px
+    .input
+      flex: 1
+    .btn
+      max-width: 270px
+      margin-left: auto
+  &-doc
+    position: absolute
+    bottom: -40px
+    left: -425px
+    z-index: -1

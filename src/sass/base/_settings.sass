@@ -148,3 +148,54 @@ input, textarea
     li.b a
       border-color: transparent
       font-weight: 700
+
+.input
+  display: block
+  width: 100%
+  height: 42px
+  border: 1px solid #DCDCDC
+  border-radius: 10px
+  padding: 0 10px
+  color: #111
+  @include placeholder
+    color: var(--color-dark-gray)
+
+.textarea
+  display: block
+  width: 100%
+  height: 105px
+  border: 1px solid #DCDCDC
+  border-radius: 10px
+  padding: 10px
+  color: #111
+  resize: none
+  @include placeholder
+    color: var(--color-dark-gray)
+
+.checkbox
+  display: block
+  cursor: pointer
+  input
+    @include visually-hidden
+    &:checked + p::before
+      background: var(--color-orange)
+  p
+    position: relative
+    font-size: 10px
+    line-height: 20px
+    padding-left: 25px
+    a
+      color: var(--color-dark-turquoise)
+      border-bottom: 1px solid var(--color-dark-turquoise)
+    &::before
+      content: ''
+      position: absolute
+      top: 2px
+      left: 0
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      border: 1px solid #DCDCDC
+      background: #fff
+      box-shadow: inset 0 0 0 4px #fff
+      transition: .15s
