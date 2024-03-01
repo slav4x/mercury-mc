@@ -15,3 +15,84 @@
       color: var(--color-dark-turquoise)
       a[href^="mailto:"]
         border-bottom: 1px solid var(--color-dark-turquoise)
+  &-more
+    background: var(--color-turquoise)
+    color: #fff
+    & + .feedback
+      margin-top: 30px
+  &-tabs
+    position: relative
+    @include flexbox
+    align-items: flex-start
+    gap: 90px
+    font-weight: 700
+    height: 60px
+    font-size: 16px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 2px
+      left: -1000px
+      right: -1000px
+      height: 1px
+      background: #fff
+    li
+      @include flexbox
+      align-items: center
+      cursor: pointer
+      height: 100%
+      position: relative
+      padding-bottom: 2px
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 5px
+        border-radius: 99px
+        background: #fff
+        opacity: 0
+        transition: .25s
+      &.active::before
+        opacity: 1
+  &-tab
+    display: none
+    &.active
+      @include flexbox
+    .btn
+      margin-top: 30px
+      margin-bottom: -21px
+      max-width: 270px
+  &-info
+    width: 360px
+    padding-top: 30px
+  &-map
+    width: calc(100% - 360px)
+    margin-bottom: -21px
+    margin-top: -2px
+    position: relative
+    & > ymaps,
+    & > iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100% !important
+      height: 100% !important
+  &-address
+    line-height: 25px
+    a
+      color: var(--color-dark-turquoise)
+      border-bottom: 1px solid var(--color-dark-turquoise)
+  &-phone
+    @include flexbox
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+    height: 42px
+    width: 272px
+    border-radius: 10px
+    border: 1px solid #fff
+  &-time
+    margin-top: 30px
+    line-height: 25px

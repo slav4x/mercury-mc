@@ -44,4 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  const contacts = document.querySelector('.contacts-more');
+  if (contacts) {
+    const tabs = document.querySelectorAll('.contacts-tabs li');
+    tabs.forEach((tab) => {
+      const id = tab.getAttribute('data-tab');
+      tab.addEventListener('click', () => {
+        [...tabs].forEach((el) => {
+          el.classList.remove('active');
+        });
+        tab.classList.add('active');
+
+        [...contacts.querySelectorAll('.contacts-tab')].forEach((el) => {
+          el.classList.remove('active');
+        });
+        document.querySelector(`.contacts-tab[data-tab="${id}"]`).classList.add('active');
+      });
+    });
+  }
 });
