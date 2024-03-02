@@ -50,3 +50,59 @@
     &:nth-child(2n) .promo-item__content::before
       left: 34px
       bottom: -21px
+
+  &-single
+    padding-bottom: var(--gap)
+    &__poster
+      float: right
+      shape-outside: margin-box
+      padding-left: 20px
+      padding-bottom: 20px
+      img
+        border-radius: 500px 20px 20px 500px
+        width: 640px
+        height: 390px
+        object-fit: cover
+        object-position: center
+    &__content
+      min-height: 390px
+      line-height: 25px
+      p
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        & + ul
+          margin-top: -30px
+      ul
+        list-style: disc
+        padding-left: 17px
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &:first-child
+          margin-top: 0
+      h2
+        font-size: 32px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 45px
+        color: var(--color-turquoise)
+        margin-bottom: 10px
+    &__title
+      padding: 30px 0
+      position: relative
+      color: #fff !important
+      margin-bottom: 40px !important
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: -30px
+        right: 0
+        bottom: 0
+        background: var(--color-turquoise)
+        z-index: -1
+        border-radius: 20px
+    .btn
+      margin: 40px auto 0
+      max-width: 370px
