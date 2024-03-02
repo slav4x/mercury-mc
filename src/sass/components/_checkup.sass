@@ -1,4 +1,5 @@
 .checkup
+  padding-bottom: var(--gap)
   &-head
     padding-bottom: var(--gap)
     .title
@@ -32,3 +33,10 @@
       border-radius: 10px
       object-fit: cover
       object-position: center
+  &-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 32px 16px
+    .btn
+      max-width: 210px
+      margin: 0 auto
