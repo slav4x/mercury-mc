@@ -1,0 +1,74 @@
+.about
+  padding-bottom: var(--gap)
+  .highlight-sidebar img:nth-child(2)
+    position: absolute
+    top: 210px
+    left: -70px
+  &-row
+    @include flexbox
+    align-items: flex-end
+  &-video
+    display: block
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+    width: 660px
+    height: 390px
+    margin-top: 35px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      border-radius: 100%
+      width: 180px
+      height: 180px
+      margin: auto
+      background: rgba(255, 255, 255, 0.30)
+      backdrop-filter: blur(15px)
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 102px
+      height: 116px
+      margin: auto
+      background-image: url("data:image/svg+xml,%3Csvg width='102' height='116' viewBox='0 0 102 116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M102 58L25.5 108.229L25.5 7.77052L102 58Z' fill='white'/%3E%3C/svg%3E%0A")
+      filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.40))
+  &-nav
+    margin-left: 90px
+    margin-bottom: 20px
+    color: var(--color-orange)
+    line-height: 20px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    gap: 10px
+    li
+      @include flexbox
+      align-items: center
+      gap: 10px
+      &:first-child
+        margin-top: 0
+      &::after
+        content: ''
+        display: block
+        width: 49px
+        height: 14px
+        background: url("data:image/svg+xml,%3Csvg width='49' height='14' viewBox='0 0 49 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L48 7' stroke='%23FF9501' stroke-linecap='round'/%3E%3Cpath d='M42 13L48 7L42 1' stroke='%23FF9501' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat right center
+        transition: .15s
+        opacity: 0
+      a
+        border-bottom: 1px solid var(--color-orange)
+      &:hover::after
+        opacity: 1
