@@ -252,3 +252,36 @@ input, textarea
       margin-top: 20px
       &:first-child
         margin-top: 55px
+
+.control
+  width: 110px
+  height: 110px
+  border-radius: 100%
+  @include flexbox
+  align-items: center
+  justify-content: center
+  background: rgba(255, 255, 255, 0.30)
+  border: 2px solid #fff
+  backdrop-filter: blur(15px)
+  position: relative
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: 1px
+    height: 32px
+    background: #dadada
+  .prev, .next
+    width: 50%
+    height: 100%
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_161_840)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.9549 0.112915C12.0755 0.112915 11.864 0.553417 10.9397 1.41315C10.3894 1.92497 9.89232 2.3873 9.34201 2.89914C7.61946 4.50126 4.63675 7.39939 3.02192 8.77365L2.26142 9.48474C1.97732 9.74881 1.74657 9.96359 1.46259 10.2277C-0.28837 11.8563 -0.629915 11.8952 1.38996 13.7738L10.8671 22.5884C11.647 23.3138 12.0317 23.8886 12.9549 23.8886C13.3821 23.8886 14.8235 23.053 13.3187 21.7266L12.0914 20.5716C11.8351 20.3414 11.6069 20.1695 11.3391 19.9204C10.6626 19.291 3.2149 12.289 2.86053 12.0683C3.10281 11.7318 11.7497 3.76681 12.7552 2.83158C13.4928 2.14564 13.9716 1.87469 13.9716 1.05854C13.9716 0.636753 13.4084 0.112915 12.9549 0.112915V0.112915Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_161_840'%3E%3Crect width='24' height='14' fill='white' transform='translate(14) rotate(90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+  .next
+    transform: rotate(180deg)

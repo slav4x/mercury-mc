@@ -63,4 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  const reviews = new Splide('.specialists-reviews__slider', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    arrows: false,
+    pagination: false,
+  }).mount();
+
+  document.querySelector('.specialists-reviews__prev').addEventListener('click', () => reviews.go('<'));
+  document.querySelector('.specialists-reviews__next').addEventListener('click', () => reviews.go('>'));
 });
