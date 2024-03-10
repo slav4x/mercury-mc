@@ -1,0 +1,25 @@
+.legal
+  padding-bottom: var(--gap)
+  &-item
+    padding: 16px 0
+    line-height: 20px
+    display: block
+    border-bottom: 1px solid #EEEEEE
+    padding-left: 76px
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.833 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V7.49996M10.833 1.66663L16.6663 7.49996M10.833 1.66663V7.49996H16.6663' stroke='%23FF9501' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat left 24px center
+    b
+      font-weight: 400
+      color: var(--color-turquoise)
+    &:nth-child(n + 6)
+      display: none
+  &-list.show .legal-item:nth-child(n + 6)
+    display: block
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    margin-top: 32px
+    .btn
+      max-width: 370px
+    &.hide
+      display: none

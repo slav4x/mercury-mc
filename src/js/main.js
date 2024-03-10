@@ -64,14 +64,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  const reviews = new Splide('.specialists-reviews__slider', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    arrows: false,
-    pagination: false,
-  }).mount();
+  if (document.querySelector('.specialists-reviews')) {
+    const reviews = new Splide('.specialists-reviews__slider', {
+      type: 'loop',
+      perPage: 3,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+    }).mount();
 
-  document.querySelector('.specialists-reviews__prev').addEventListener('click', () => reviews.go('<'));
-  document.querySelector('.specialists-reviews__next').addEventListener('click', () => reviews.go('>'));
+    document.querySelector('.specialists-reviews__prev').addEventListener('click', () => reviews.go('<'));
+    document.querySelector('.specialists-reviews__next').addEventListener('click', () => reviews.go('>'));
+  }
+
+  const legal = document.querySelector('.legal');
+  if (legal) {
+    const btnWrap = legal.querySelector('.legal-btn');
+    const btn = btnWrap.querySelector('.btn');
+    const itemsList = legal.querySelector('.legal-list');
+
+    btn.addEventListener('click', () => {
+      itemsList.classList.add('show');
+      btnWrap.classList.add('hide');
+    });
+  }
 });
