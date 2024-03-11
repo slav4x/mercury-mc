@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (document.querySelector('.gratitude')) {
-    const reviews = new Splide('.gratitude-slider', {
+    const gratitude = new Splide('.gratitude-slider', {
       type: 'loop',
       perPage: 5,
       perMove: 1,
@@ -99,18 +99,18 @@ document.addEventListener('DOMContentLoaded', function () {
       gap: '40px',
     }).mount();
 
-    document.querySelector('.gratitude-prev').addEventListener('click', () => reviews.go('<'));
-    document.querySelector('.gratitude-next').addEventListener('click', () => reviews.go('>'));
+    document.querySelector('.gratitude-prev').addEventListener('click', () => gratitude.go('<'));
+    document.querySelector('.gratitude-next').addEventListener('click', () => gratitude.go('>'));
   }
 
   if (document.querySelector('.stock')) {
-    const reviews = new Splide('.stock-slider', {
+    const stock = new Splide('.stock-slider', {
       type: 'loop',
       arrows: false,
       gap: '160px',
     }).mount();
 
-    document.querySelector('.stock-prev').addEventListener('click', () => reviews.go('<'));
-    document.querySelector('.stock-next').addEventListener('click', () => reviews.go('>'));
+    document.querySelector('.stock-prev').addEventListener('click', () => stock.go('<'));
+    document.querySelector('.stock-next').addEventListener('click', () => stock.go('>'));
   }
 });
