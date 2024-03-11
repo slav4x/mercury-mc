@@ -1,0 +1,83 @@
+.stock
+  padding-bottom: var(--gap)
+  .container
+    max-width: 1225px
+  &-slider, .splide__track
+    overflow: initial
+  .splide__pagination
+    position: absolute
+    top: 0
+    left: -30px
+    bottom: 0
+    padding: 0
+    right: initial
+    flex-direction: column
+    gap: 20px
+    li
+      display: block
+  .splide__pagination__page
+    opacity: 1
+    background: #a8e3e3
+    margin: 0
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #fff
+    display: block
+  .splide__pagination__page.is-active
+    transform: none
+    background: #32b6b8
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #A8E3E3
+  &-item
+    min-height: 430px
+    &__main
+      background: #32b6b8
+      border-radius: 20px
+      padding: 35px 30px
+      min-height: 340px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 300px
+        left: 440px
+        width: 70px
+        height: 70px
+        background: #44C8CA
+        border-radius: 100%
+      &::after
+        content: ''
+        position: absolute
+        top: 370px
+        left: 540px
+        width: 25px
+        height: 25px
+        background: #44C8CA
+        border-radius: 100%
+    &__content
+      color: #fff
+      width: 530px
+      h2
+        font-size: 44px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 70px
+      p
+        margin-top: 15px
+    &__image
+      position: absolute
+      top: 0
+      right: 0
+      width: calc(100% - 530px - 30px)
+      height: 430px
+      background: url(../img/stock-item.jpg) no-repeat center / cover
+      border-radius: 500px 20px 20px 500px
+      img
+        position: absolute
+        bottom: 0
+        right: 135px
+    .btn
+      max-width: 370px
+      margin-top: 24px
+      margin-left: 30px
+  &-control
+    position: absolute
+    bottom: -35px
+    right: 70px

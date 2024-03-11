@@ -102,4 +102,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.gratitude-prev').addEventListener('click', () => reviews.go('<'));
     document.querySelector('.gratitude-next').addEventListener('click', () => reviews.go('>'));
   }
+
+  if (document.querySelector('.stock')) {
+    const reviews = new Splide('.stock-slider', {
+      type: 'loop',
+      arrows: false,
+      gap: '160px',
+    }).mount();
+
+    document.querySelector('.stock-prev').addEventListener('click', () => reviews.go('<'));
+    document.querySelector('.stock-next').addEventListener('click', () => reviews.go('>'));
+  }
 });

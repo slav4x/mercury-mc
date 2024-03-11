@@ -3,6 +3,24 @@
 
 {% block content %}
 
+<section class="stock">
+  <div class="container">
+    <div class="splide stock-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">{% include 'components/stock-item.html' %}</li>
+          <li class="splide__slide">{% include 'components/stock-item.html' %}</li>
+          <li class="splide__slide">{% include 'components/stock-item.html' %}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="control stock-control">
+      <div class="prev stock-prev"></div>
+      <div class="next stock-next"></div>
+    </div>
+  </div>
+</section>
+
 {% include 'components/about-section.html' %}
 
 <section class="services">
