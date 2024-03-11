@@ -88,4 +88,18 @@ document.addEventListener('DOMContentLoaded', function () {
       btnWrap.classList.add('hide');
     });
   }
+
+  if (document.querySelector('.gratitude')) {
+    const reviews = new Splide('.gratitude-slider', {
+      type: 'loop',
+      perPage: 5,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+      gap: '40px',
+    }).mount();
+
+    document.querySelector('.gratitude-prev').addEventListener('click', () => reviews.go('<'));
+    document.querySelector('.gratitude-next').addEventListener('click', () => reviews.go('>'));
+  }
 });
