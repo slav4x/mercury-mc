@@ -24,6 +24,8 @@ const maskPhone = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  new isvek.Bvi();
+
   Fancybox.bind('[data-fancybox]', {
     dragToClose: false,
     autoFocus: false,
