@@ -1,0 +1,462 @@
+@media(max-width: 1024px)
+  :root
+    --gap: 50px
+
+  .container
+    max-width: 100%
+
+  .btn
+    font-size: 14px
+
+  .header-pc
+    display: none
+
+  .header
+    padding-bottom: 20px
+  .headerMob
+    display: block
+    &-top
+      background: var(--color-turquoise)
+      padding: 15px 0
+      .container
+        @include flexbox
+        align-items: center
+        justify-content: space-between
+    &-logo img
+      height: 50px
+    &-city
+      &__active
+        line-height: 20px
+        color: #fff
+        border-bottom: 1px dashed #fff
+        position: relative
+    &-middle
+      padding: 12px 0
+      .container
+        @include flexbox
+        align-items: center
+    &-phone
+      color: var(--color-orange)
+      font-size: 16px
+      line-height: 20px
+    &-burger
+      width: 32px
+      height: 32px
+      background: url(../img/svg/burger.svg) no-repeat
+      margin-left: 20px
+    &-links
+      @include flexbox
+      align-items: center
+      gap: 20px
+      margin-left: auto
+    .btn
+      border-radius: 0
+
+  .stock-item__main
+    padding: 0
+    border-bottom-left-radius: 120px
+    &::before
+      z-index: 1
+      width: 55px
+      height: 55px
+      right: 20px
+      bottom: 220px
+      top: initial
+      left: initial
+    &::after
+      z-index: 1
+      width: 20px
+      height: 20px
+      right: 0px
+      bottom: 210px
+      top: initial
+      left: initial
+  .stock-item__content
+    padding: 20px 20px 50px
+    width: 100%
+    h2
+      font-size: 24px
+      line-height: 40px
+    p
+      margin-top: 10px
+  .stock-item__image
+    position: relative
+    width: 100%
+    height: 240px
+    img
+      right: 0
+      left: 0
+      margin: 0 auto
+      height: 270px
+  .stock-item .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    border-radius: 0
+    margin-top: 20px
+  .stock-control
+    bottom: 55px
+    right: 30px
+    width: 90px
+    height: 90px
+
+  .title
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 20px
+    span
+      padding-bottom: 7px
+
+  .highlight-main
+    width: 100%
+  .highlight-content
+    width: 100%
+    margin: 20px 0 0
+    padding: 15px
+    font-size: 12px
+    line-height: 1.65
+    p
+      margin-top: 10px
+  .highlight-sidebar
+    width: 100%
+
+  .about
+    .highlight-content
+      padding-bottom: 40px
+    .highlight-sidebar
+      margin-top: -20px
+      img
+        width: calc(100% - 60px)
+        margin-left: auto
+        &:nth-child(2)
+          position: relative
+          top: 0
+          left: 0
+          margin-top: -10px
+          margin-left: 0
+          margin-right: auto
+
+  .about-video
+    width: calc(100% + 30px)
+    margin: 30px -15px
+    height: 220px
+    border-radius: 0
+  .about-video::before
+    width: 100px
+    height: 100px
+  .about-video::after
+    width: 100px
+    height: 100px
+    background-size: auto 60px
+    background-repeat: no-repeat
+    background-position: center
+  .about-nav
+    width: 100%
+    margin-left: 0
+    margin-bottom: 0
+
+  .services-grid
+    grid-template-columns: repeat(1, 1fr)
+
+  .specialists-top__filter
+    flex: initial
+    width: 100%
+    justify-content: flex-start
+    margin-top: 20px
+    gap: 10px
+  .specialists-top__search
+    max-width: 100%
+  .specialists-top__select
+    flex: 1
+  .specialists-top__select select
+    flex: 1
+  .specialists-top
+    margin-bottom: 20px
+  .specialists-grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px 10px
+  .specialists-item__photo
+    height: 240px
+  .specialists-item__name
+    font-size: 14px
+    line-height: 20px
+    min-height: 40px
+    margin-top: 10px
+  .specialists-item__info
+    font-size: 12px
+    margin-top: 5px
+    line-height: 18px
+  .specialists-item .btn
+    margin-top: 10px
+    height: 32px
+    padding: 0
+
+  .promo-grid
+    gap: 20px
+  .promo-item
+    width: 100%
+    padding-bottom: 112px
+  .promo-item__content
+    padding: 20px 20px 150px
+  .promo-item__title
+    font-size: 20px
+    line-height: 30px
+  .promo-item__desc
+    margin-top: 10px
+  .promo-item__poster
+    width: calc(100% - 30px)
+    height: 200px
+    bottom: -50px
+  .promo-item .btn-wrap
+    bottom: -112px
+    left: 0
+    right: 0
+  .promo-item .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+
+  .news-grid
+    gap: 20px
+  .news-col
+    width: 100%
+    gap: 20px
+  .news-item
+    width: 100%
+    gap: 15px
+  .news-item__poster
+    width: 100% !important
+  .news-item__content
+    width: 100% !important
+  .news-item__title
+    font-size: 16px !important
+  .news-item__summary
+    font-size: 12px
+    line-height: 18px
+  .news-item__date
+    font-size: 12px
+
+  .news .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+
+  .footer
+    padding: 30px 0
+  .footer-sidebar
+    width: 100%
+    max-width: 100%
+    margin-bottom: 20px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+  .footer-main
+    width: 100%
+  .footer-nav
+    font-size: 12px
+    line-height: 20px
+    gap: 10px
+  .footer-row.bottom
+    margin-top: 30px
+
+  .footer-btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+    margin-bottom: 0
+    order: 1
+    margin-top: 20px
+  .footer-link
+    font-size: 14px
+  .footer-phone p
+    font-size: 12px
+    margin-bottom: 0
+  .footer-phone a
+    font-size: 16px
+  .footer-logo
+    margin-bottom: 20px
+    img
+      height: 50px
+
+  .legal-item
+    padding: 10px 0 10px 30px
+    background-position: left center
+    font-size: 12px
+
+  .gratitude-control,
+  .specialists-reviews__control
+    width: 90px
+    height: 90px
+    right: 15px
+    top: -60px
+
+  .highlight-sidebar .btn
+    max-width: initial
+
+  .partners-grid
+    gap: 20px
+    grid-template-columns: repeat(2, 1fr)
+
+  .feedback
+    padding-top: 0
+  .feedback-doc
+    display: none
+  .feedback-content::before
+    display: none
+  .feedback .title
+    margin-bottom: 30px
+  .feedback .title::before
+    left: 0
+    bottom: -10px
+  .feedback-form .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+
+  .supervisory-item
+    font-size: 12px
+    line-height: 20px
+
+  .checkup-grid
+    grid-template-columns: repeat(1, 1fr)
+  .checkup-grid .btn
+    padding: 0
+
+  .best-grid
+    grid-template-columns: repeat(1, 1fr)
+  .best-item__title
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 10px
+  .best-item__content
+    padding: 20px
+    border-radius: 10px
+    font-size: 12px
+    line-height: 20px
+
+  .complex-grid
+    grid-template-columns: repeat(1, 1fr)
+    gap: 20px
+
+  .faq-title
+    font-size: 14px
+    line-height: 20px
+  .faq-text
+    font-size: 12px
+    line-height: 20px
+
+  .contacts-list
+    grid-template-columns: repeat(2, 1fr)
+  .contacts-tabs
+    gap: 40px
+    font-size: 14px
+    line-height: 20px
+  .contacts-tabs li br
+    display: block
+  .contacts-tab .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+    margin-bottom: 0
+  .contacts-info
+    width: 100%
+  .contacts-map
+    width: calc(100% + 30px)
+    margin: 0 -15px
+    height: 200px
+
+  .highlight-sidebar .btn:first-child
+    margin-top: 10px
+  .highlight-sidebar .btn
+    margin-top: 10px
+
+  .news-page__grid
+    grid-template-columns: repeat(1, 1fr)
+  .news-pagination__list
+    width: 100%
+    order: 1
+    justify-content: center
+    margin-top: 20px
+
+  .promo-single__poster
+    float: initial
+    width: 100%
+    height: 240px
+    padding: 0
+    img
+      width: 100%
+      height: 100%
+  .promo-single__title
+    margin-bottom: 20px !important
+    font-size: 20px !important
+    padding: 20px
+    line-height: 30px !important
+    &::before
+      left: 0
+      top: -240px
+      border-top-left-radius: 120px
+  .promo-single__poster img
+    border-radius: 120px 20px 20px 120px
+  .promo-single__content
+    p
+      margin-bottom: 20px
+      & + ul
+        margin-top: -20px
+    ul
+      margin-bottom: 20px
+    h2
+      font-size: 20px
+      line-height: 30px
+
+  .promo-single .btn
+    max-width: initial
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    border-radius: 0
+
+  .price-title
+    font-size: 20px
+    line-height: 30px
+
+  .price-col:nth-child(2)
+    width: 80px
+    padding-right: 0
+    padding-left: 0
+  .price-col:nth-child(1)
+    width: calc(100% - 95px)
+
+  .services-text__title
+    font-size: 20px
+    line-height: 30px
+
+  .specialists-single__photo
+    width: 100%
+    margin-top: 20px
+    img
+      height: 300px
+      object-fit: contain
+  .specialists-single__info
+    width: 100%
+    margin-top: 20px
+  .specialists-single__btn
+    gap: 10px
+    .btn
+      max-width: 100% !important
+
+  .price-btn
+    gap: 10px
+    .btn
+      max-width: 100% !important
+    .btn-back
+      order: 1

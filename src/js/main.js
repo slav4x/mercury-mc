@@ -73,6 +73,14 @@ document.addEventListener('DOMContentLoaded', function () {
       perMove: 1,
       arrows: false,
       pagination: false,
+      breakpoints: {
+        1024: {
+          perPage: 2,
+        },
+        576: {
+          perPage: 1,
+        },
+      },
     }).mount();
 
     document.querySelector('.specialists-reviews__prev').addEventListener('click', () => reviews.go('<'));
@@ -99,6 +107,18 @@ document.addEventListener('DOMContentLoaded', function () {
       arrows: false,
       pagination: false,
       gap: '40px',
+      breakpoints: {
+        1024: {
+          perPage: 4,
+        },
+        768: {
+          perPage: 3,
+        },
+        576: {
+          perPage: 2,
+          gap: '20px',
+        },
+      },
     }).mount();
 
     document.querySelector('.gratitude-prev').addEventListener('click', () => gratitude.go('<'));
@@ -110,6 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
       type: 'loop',
       arrows: false,
       gap: '160px',
+      breakpoints: {
+        1024: {
+          gap: '15px',
+        },
+      },
     }).mount();
 
     document.querySelector('.stock-prev').addEventListener('click', () => stock.go('<'));
