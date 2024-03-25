@@ -486,3 +486,22 @@
       max-width: 100% !important
     .btn-back
       order: 1
+
+  .popup
+    max-width: 560px
+    padding: 0 30px
+    &-doc
+      display: none
+    &-content
+      max-width: 560px
+      &::before
+        display: none
+      .title::before
+        left: 0
+    &-form
+      flex-direction: column
+      align-items: flex-start
+      .input
+        flex: initial
+      .btn
+        margin-left: 0

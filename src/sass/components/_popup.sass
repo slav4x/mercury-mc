@@ -1,0 +1,51 @@
+.popup
+  display: none
+  background: #fff
+  max-width: 1065px
+  width: 100%
+  padding: 0 40px
+  &-content
+    max-width: 985px
+    position: relative
+    @include flexbox
+    align-items: flex-start
+    &::before
+      content: ''
+      position: absolute
+      bottom: 30px
+      left: -80px
+      width: 276px
+      height: 276px
+      border-radius: 100%
+      background: var(--color-light-turquoise)
+      z-index: -5
+    .title
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        bottom: -20px
+        height: 3px
+        right: 0
+        left: -260px
+        background: var(--color-turquoise)
+        z-index: -5
+  &-form
+    @include flexbox
+    align-items: center
+    gap: 15px
+    max-width: 560px
+    padding: 30px 0
+    margin-left: auto
+    .input
+      flex: 1
+    .btn
+      max-width: 270px
+      margin-left: auto
+  &-doc
+    margin-top: -35px
+
+.fancybox__container
+  --fancybox-bg: rgba(0, 108, 110, 0.8)
+.fancybox__backdrop
+  backdrop-filter: blur(10px)
