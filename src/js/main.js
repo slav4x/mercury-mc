@@ -140,4 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.stock-prev').addEventListener('click', () => stock.go('<'));
     document.querySelector('.stock-next').addEventListener('click', () => stock.go('>'));
   }
+
+  const burger = document.querySelector('.headerMob-burger');
+  const dropdown = document.querySelector('.header-dropdown');
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('open');
+    dropdown.classList.toggle('open');
+  });
 });
